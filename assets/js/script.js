@@ -17,7 +17,12 @@ var truckIcon = L.icon({
     shadowAnchor: [4, 62],  // the same for the shadow
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
-L.marker([29.7604, -95.3698], {icon: truckIcon}).addTo(mymap).bindPopup("Wokker Texas Ranger");
+for ( var i=0; i < markers.length; ++i )
+{
+ L.marker( [markers[i].lat, markers[i].lng], {icon: truckIcon} )
+  .bindPopup( '<a href="' + markers[i].url + '" target="_blank">' + markers[i].name + '</a>' )
+  .addTo(mymap);
+}
 // Add a Click Event with a popup alert that we can use to give more info about food trucks
 var popup = L.popup();
 
