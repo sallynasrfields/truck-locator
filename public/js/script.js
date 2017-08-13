@@ -1,5 +1,6 @@
 // Center Map
 var mymap = L.map('mapid').setView([29.7604, -95.3698], 13);
+console.log(mymap);
 // Add Open Street Map Layer
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -9,7 +10,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(mymap);
 // Add Custom Marker
 var truckIcon = L.icon({
-    iconUrl: './assets/images/foodtruck_pin.png',
+    iconUrl: 'img/foodtruck_pin.png',
 
     iconSize:     [38, 95], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
@@ -34,4 +35,3 @@ function onMapClick(e) {
 }
 
 mymap.on('click', onMapClick);
-

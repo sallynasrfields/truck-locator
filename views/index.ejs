@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Truck Finder</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Leaflet CSS File -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <!-- Leaflet JavaScript File -->
+   <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>  
+</head>
+<body>
+<h1>Add Your Truck</h1>
+
+<form action="/places" method="POST">
+  <div class="form-group">
+    <input type="text" class="form-control" name="name" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="address" placeholder="Address">
+  </div>
+  <input type="submit" class="btn btn-primary">
+</form>
+
+<div class="row">
+  <div class="col-md-6">
+    <h2>Food Trucks</h2>
+    <% places.forEach(function(place) { %>
+      <div class="well">
+        <%= place.name %>
+      </div>
+    <% }); %>
+  </div>
+   <div class="col-md-6">
+    <h2>Map</h2>
+    <div id="mapid"></div>
+  </div> 
+</div>
+<!-- Custom JavaScript File Link -->
+<!-- <script type="text/javascript" src="./js/markers.js"></script> -->
+<script> var markers = <%- JSON.stringify(places) %>; </script>
+<script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>
