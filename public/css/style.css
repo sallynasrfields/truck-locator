@@ -1,15 +1,14 @@
 /* Map */
 #mapid {
   height: 800px;
-  width: 1700px;
 }
 
 /* Add your Truck Form */
 .form-control {
-width: 350px;
+width: 300px;
 }
 
 /* Food Trucks List */
 #food-trucks-list {
- width: 400px;
+ width: 200px;
 }
