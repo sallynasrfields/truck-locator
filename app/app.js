@@ -6,4 +6,4 @@ var ReactDOM = require("react-dom");
 var Parent = require("./components/Main");
 
 // This code here allows us to render our main component (in this case Parent)
-ReactDOM.render(<Parent />, document.getElementById("app"));
+ReactDOM.render(routes, document.getElementById("app"));

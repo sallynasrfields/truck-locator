@@ -1,17 +1,28 @@
-// Include React
+// Include React as a dependency
 var React = require("react");
+// Including the Link component from React Router to navigate within our application without full page reloads
+// https://github.com/ReactTraining/react-router/blob/master/docs/API.md#link
+var Link = require("react-router").Link;
 
-// Here we create Parent, our main component
-var Parent = React.createClass({
-  // Here we describe this component's render method
+// Create the Main component
+var Main = React.createClass({
+
   render: function() {
+
     return (
-      <div className="container">
-        <h1>Testing</h1>
+      <div class ="main-container">
+        <header>
+           {this.props.children}
+        </header>
+        <body>
+          <p>testing</p>
+           {this.props.children}
+        </body>
+        <footer>
+          {/*no component for footer*/}
+        </footer>
       </div>
-    );
+
+    )
   }
 });
-
-// Export the component back for use in other files
-module.exports = Parent;
