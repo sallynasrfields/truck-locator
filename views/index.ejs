@@ -13,11 +13,27 @@
     <!-- Leaflet JavaScript File -->
    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-   crossorigin=""></script>  
+   crossorigin=""></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.css" />
+
+  <script src="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 </head>
 <body>
+<div class="row">
+  <div class="col-md-10">
+    <div id="mapid"></div>
+  </div>
+   <div id="food-trucks-list" class="col-md-2">
+    <h2>Food Trucks</h2>
+    <% places.forEach(function(place) { %>
+      <div class="btn btn-primary">
+        <%= place.name %>
+      </div>
+    <% }); %>
+  </div>
+</div>
 <h1>Add Your Truck</h1>
-
 <form action="/places" method="POST">
   <div class="form-group">
     <input type="text" class="form-control" name="name" placeholder="Name">
@@ -29,18 +45,7 @@
 </form>
 
 <div class="row">
-  <div class="col-md-6">
-    <h2>Food Trucks</h2>
-    <% places.forEach(function(place) { %>
-      <div class="well">
-        <%= place.name %>
-      </div>
-    <% }); %>
-  </div>
-   <div class="col-md-6">
-    <h2>Map</h2>
-    <div id="mapid"></div>
-  </div> 
+  
 </div>
 <!-- Custom JavaScript File Link -->
 <!-- <script type="text/javascript" src="./js/markers.js"></script> -->

@@ -35,3 +35,6 @@ function onMapClick(e) {
 }
 
 mymap.on('click', onMapClick);
+
+//Leaflet Geolocator
+L.control.locate().addTo(mymap);
