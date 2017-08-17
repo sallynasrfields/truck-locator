@@ -18,9 +18,11 @@ var Router = router.Router;
 var browserHistory = router.browserHistory;
 
 // Reference the high-level components
-var Body = require("../components/Body");
+
 var Calendar = require ("../components/Calendar")
 var Header = require("../components/Header");
+var Landing= require("../components/Landing");
+var Login= require("../components/Login");
 var Main= require("../components/Main");
 var TruckMap = require("../components/TruckMap");
 
@@ -31,19 +33,11 @@ module.exports = (
     <Route path="/" component={Main}>
 
       {/* Route to Body components for each of the below search paths*/}
-      <Route path = "login" component = {Bodies}/>
-      <ROute path = "signup" component = {Body} />
-      <Route path="truckinfo" component={Body} />
-      <Route path="account" component = {Body}  />
-      <Route path = "preview" component = {Body} />
-
-
+      <Route path="account" component = {Account}  />
       <Route path="calendar" component={Calendar} />
-      <Route path = "map" component = {TruckMap}/>
-
-      {/* I}
-
-
+      <Route path = "login" component = {Login} />
+      <Route path="truckinfo" component={TruckInfo} />
+      <Route path = "trucksearchmap" component = {TruckSearchMap}/>
 
     </Route>
   </Router>
