@@ -28,14 +28,16 @@
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "express-ejs-layouts": "^2.0.0",
+    "firebaseui": "^2.3.0",
     "geocoder": "^0.2.3",
+    "google-auth-library": "^0.10.0",
     "morgan": "^1.7.0",
     "mysql": "^2.14.1",
     "pg": "^4.4.6",
     "pg-hstore": "^2.3.2",
-    "rowdy-logger": "0.0.2",
-    "sequelize": "^3.19.3",
     "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react-dom": "^0.14.3",
+    "rowdy-logger": "0.0.2",
+    "sequelize": "^3.19.3"
   }
 }
