@@ -1,38 +1,37 @@
-// Include React as a dependency
-var React = require("react");
-// Including the Link component from React Router to navigate within our application without full page reloads
-// https://github.com/ReactTraining/react-router/blob/master/docs/API.md#link
-var Link = require("react-router").Link;
+import React from 'react'
+import { Link } from 'react-router'
+
+//Require HomeHeader component (child)
+var HomeHeader = require("./HomeHeader");
+var Footer = require("./Footer");
 
 
 
 // Create the Search component
 var Home = React.createClass({
-  RenderHomeHeader(header){
-    this.setstate({header});
-  }
+  
+  // renderHomeHeader(header){
+  //   this.setState({header});
+  // },
 
- render: function() {
-        return(
-          <div>
-            <Header
+  // renderFooter(footer){
+  //   this.setState({footer});
+  // },
 
-          </div>
-            
-             <div className="collapse navbar-collapse navbar-ex1-collapse">
-                <ul className="nav navbar-nav navbar-right">
-                  {/* Using <Link> in place of <a> and "to" in place of "href" */}
-                  <li><Link to="/trucksearchmap">Find Trucks</Link></li>
-                </ul>
-              </div>
-        );
+  render: function(){
+    return(  
 
+      <div>  
+        "Hello World"      
+ 
+      </div>
+    );
  }
 
 });
 
 
-module.exports Home;
+module.exports=Home;
 
 
 

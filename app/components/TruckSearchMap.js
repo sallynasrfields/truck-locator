@@ -5,7 +5,7 @@ var React = require("react");
 var helpers = require("../utils/helpers");
 
 // Create the Search component
-var Maps = React.createClass({
+var TruchSearchMap = React.createClass({
 
     getInitialState: function(){
         return{
@@ -19,4 +19,4 @@ var Maps = React.createClass({
       }
 });
 
-module.exports = Maps;
+module.exports = TruckSearchMap;

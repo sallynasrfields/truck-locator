@@ -1,19 +1,32 @@
-// Include React as a dependency
-var React = require("react");
-// Including the Link component from React Router to navigate within our application without full page reloads
-// https://github.com/ReactTraining/react-router/blob/master/docs/API.md#link
-var Link = require("react-router").Link;
+import React from 'react'
+import { Link } from 'react-router'
 
-// Create the Main component
+
+
+
+// Create the Search component
 var Main = React.createClass({
-  render: function() {
-    return (
-      <div class ="main-container">
-        {this.props.children}   
-        <footer>
-          {/*no component for footer*/}
-        </footer>
+    componentDidMount(){
+        console.log('seth',this.context);
+    },
+
+
+  render() {
+    return(  
+      <div>  
+
+      
       </div>
-    )
-  }
+    );
+ }
+
 });
+
+
+module.exports=Main;
+
+
+
+
+
+
