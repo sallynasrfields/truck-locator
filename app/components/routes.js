@@ -17,25 +17,46 @@
 
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, hashHistory } from 'react-router'
+// import { Router, Route, hashHistory, Redirect } from 'react-router'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+
 
 // Component imports
 import Home from './Home'
 import Login from './Login'
-import TruckSearchMap from './TruckSearchMap'
+// import Main from './Main'
+// import TruckSearchMap from './TruckSearchMap'
 
 
-render((
+// Export the Routes
+/*module.exports = (
   // High level component is the Router component.
-  <Router history={hashHistory}>
-    <div>  
+<Router history={browserHistory}>
+    <Route exact path ="/" render={() => <Redirect to="/home" />} />
+      
+     // {/* Route to Body components for each of the below search paths*/
+      // {/*<Route path="/account" component = {Account}  />
+      // <Route path="/calendar" component={Calendar} />*/}
+      // <Route path="/home" component={Home} />
+      // <Route path = "/login" component = {Login} />
+      // {/*<Route path="/truckinfo" component={TruckInfo} />*/}
+      // {/*<Route path = "/trucksearchmap" component = {TruckSearchMap}/>*/}
+//   </Router>
+// ), document.getElementById('app'))*/
+
+render ((
+  // High level component is the Router component.
+<Router>
+  <div>
+    <Route exact path ="/" render={() => <Redirect to="/home" />} />
+      
       {/* Route to Body components for each of the below search paths*/}
       {/*<Route path="/account" component = {Account}  />
       <Route path="/calendar" component={Calendar} />*/}
-      <Route path="/" component={Home} />
+      <Route path="/home" component={Home} />
       <Route path = "/login" component = {Login} />
       {/*<Route path="/truckinfo" component={TruckInfo} />*/}
-      <Route path = "/trucksearchmap" component = {TruckSearchMap}/>
-    </div>
+      {/*<Route path = "/trucksearchmap" component = {TruckSearchMap}/>*/}
+      </div>
   </Router>
 ), document.getElementById('app'))

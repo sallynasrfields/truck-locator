@@ -3,7 +3,7 @@
 module.exports = {
 
   // This is the entry point or start of our react applicaton
-  entry: "./app/components/routes.js",
+  entry: "./app/app.js",
 
   // The plain compiled JavaScript will be output into this file
   output: {
