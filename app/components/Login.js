@@ -13,7 +13,9 @@ export default class Login extends React.Component {
     return(  
       <div>  
         <HomeHeader setChild={this.setChild.bind(this)}/>
-        You are Logging in...
+        <div> 
+            This is Login
+        </div>
         
       </div>
     );

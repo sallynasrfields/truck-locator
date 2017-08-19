@@ -5,6 +5,7 @@ import React from 'react'
 import Landing from './Landing';
 import TruckSearchMap from './TruckSearchMap';
 import Login from './Login';
+import Footer from './Footer';
 
 // Create the Search component
 export default class Home extends React.Component {
@@ -32,6 +33,7 @@ export default class Home extends React.Component {
          {this.state.showTruckInfo ? <TruckInfo/> : null}
          {this.state.showAccount ? <Account/> : null}
          {this.state.showCalendar ? <Calendar/> : null}  
+         <Footer/>
       </div>
     );
  }

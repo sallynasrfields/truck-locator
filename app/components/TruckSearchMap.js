@@ -1,6 +1,7 @@
 import React from 'react'
 import HomeHeader from './HomeHeader'
 
+
 // Create the Search component
 export default class TruckSearchMap extends React.Component {
     setChild(showLand,showSearch,showLogin){
@@ -14,6 +15,8 @@ export default class TruckSearchMap extends React.Component {
       <div>  
         <HomeHeader setChild={this.setChild.bind(this)}/>
         You are searching trucks...
+  
+
         
       </div>
     );
