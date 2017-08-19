@@ -1,20 +1,17 @@
-// Include React as a dependency
-var React = require("react");
+import React from 'react'
 
-// Include the helpers for making API calls
-var helpers = require("../utils/helpers");
 
 // Create the Search component
-var Footer = React.createClass({
-    render: function() {
-    this.props.renderFooter("links and sutff");
-        return(
-            <Footer footer = {this.props.footer}/>
+export default class HomeHeader extends React.Component {
+ 
 
-        );
-    }
+  render(){
+    return(  
+   <div>  
+       FOOTER
+   </div>
 
-});
-
-
-module.exports = Footer;
+     
+    );
+ }
+}
