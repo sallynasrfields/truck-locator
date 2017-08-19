@@ -1,37 +1,41 @@
 import React from 'react'
-import { Link } from 'react-router'
+
 
 //Require HomeHeader component (child)
-var HomeHeader = require("./HomeHeader");
-var Footer = require("./Footer");
-
-
+import Landing from './Landing';
+import TruckSearchMap from './TruckSearchMap';
 
 // Create the Search component
-var Home = React.createClass({
-  
-  // renderHomeHeader(header){
-  //   this.setState({header});
-  // },
-
-  // renderFooter(footer){
-  //   this.setState({footer});
-  // },
-
-  render: function(){
+export default class Home extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      LandingPage:true,
+      showSearchPage: false
+    };
+  }
+    setParent(Landing,Truck) {
+    this.setState({
+      LandingPage: Landing,
+      showSearchPage:Truck
+    });
+    }
+  render(){
     return(  
-
       <div>  
-        "Hello World"      
- 
+         {this.state.LandingPage ? <Landing setParent={this.setParent.bind(this)}  /> : null}  
+         {this.state.showSearchPage ? <TruckSearchMap/> : null}
+         {this.state.showLogin ? <Login/> : null}
+         {this.state.showTruckInfo ? <TruckInfo/> : null}
+         {this.state.showAccount ? <Account/> : null}
+         {this.state.showCalendar ? <Calendar/> : null}  
       </div>
     );
  }
 
-});
+}
 
 
-module.exports=Home;
 
 
 

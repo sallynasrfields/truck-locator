@@ -1,22 +1,21 @@
-// Include React as a dependency
-var React = require("react");
-
-// Include the helpers for making API calls
-var helpers = require("../utils/helpers");
+import React from 'react'
 
 // Create the Search component
-var TruchSearchMap = React.createClass({
+export default class TruckSearchMap extends React.Component {
+  render(){
+    return(  
+      <div>  
+        You are searching trucks...
+        
+      </div>
+    );
+ }
+}
 
-    getInitialState: function(){
-        return{
 
-        };
-    },
 
-      render: function() {
 
-   //render landing page if path = "/search"
-      }
-});
 
-module.exports = TruckSearchMap;
+
+
+
