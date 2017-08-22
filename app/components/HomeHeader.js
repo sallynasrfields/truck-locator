@@ -14,15 +14,13 @@ export default class HomeHeader extends React.Component {
         var showLand = false;
         var showLogin = false;
         var showSearch = true;         
-        this.props.setChild(showLand,showSearch,showLogin);
-    
+        this.props.setChild(showLand,showSearch,showLogin);    
     }
         handleHomeClick(){
         var showLand = true;
         var showLogin = false;
         var showSearch = false;         
-        this.props.setChild(showLand,showSearch,showLogin);
-    
+        this.props.setChild(showLand,showSearch,showLogin);    
     }
    
 
