@@ -3,40 +3,44 @@ import React from 'react'
 
 // Create the Search component
 export default class HomeHeader extends React.Component {
-     handleLoginClick(){
+    handleLoginClick() {
         var showLand = false;
         var showLogin = true;
-        var showSearch = false; 
-        this.props.setChild(showLand,showSearch,showLogin);
+        var showSearch = false;
+        this.props.setChild(showLand, showSearch, showLogin);
     }
 
-        handleTruckClick(){
+    handleTruckClick() {
         var showLand = false;
         var showLogin = false;
-        var showSearch = true;         
-        this.props.setChild(showLand,showSearch,showLogin);
-    
+        var showSearch = true;
+        this.props.setChild(showLand, showSearch, showLogin);
+
     }
-        handleHomeClick(){
+    handleHomeClick() {
         var showLand = true;
         var showLogin = false;
-        var showSearch = false;         
-        this.props.setChild(showLand,showSearch,showLogin);
-    
+        var showSearch = false;
+        this.props.setChild(showLand, showSearch, showLogin);
+
     }
-   
 
-  render(){
-    return(  
-   <div>  
-          
-            Home Header  
-          <button className="btn btn-primary btn-lg" onClick={this.handleLoginClick.bind(this)}>Login</button>
-         <button className="btn btn-primary btn-lg" onClick={this.handleTruckClick.bind(this)}>Search</button>
-          <button className="btn btn-primary btn-lg" onClick={this.handleHomeClick.bind(this)}>Home</button>        
-      </div>
 
-     
-    );
- }
+    render() {
+        return (
+            <div className="header row">
+
+                <div className="col-md-4">
+                    <img src="../img/logo.png" height="50%" width="auto"/>
+                </div>
+                <div className="col-md-6 col-md-offset-2 buttons">
+                    <button className="btn btn-primary btn-lg" onClick={this.handleLoginClick.bind(this)}>Login</button>
+                    <button className="btn btn-primary btn-lg" onClick={this.handleTruckClick.bind(this)}>Search</button>
+                    <button className="btn btn-primary btn-lg" onClick={this.handleHomeClick.bind(this)}>Home</button>
+                </div>
+            </div>
+
+
+        );
+    }
 }
