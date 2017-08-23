@@ -24,10 +24,10 @@ export default class Login extends React.Component {
         <HomeHeader setChild={this.setChild.bind(this)} />
 
         <div className="row">
-          <div className="col-lg-12">
-            <div className="panel panel-default vendor-log-in">
-              <div className="panel-heading">
-                <h3 className="panel-title">Log In</h3>
+          <div className="col-lg-12" style={{backgroundColor: '#ccc'}}>
+            <div className="panel panel-default vendor-log-in" style={{width: '40%', margin: '0 auto'}}>
+              <div className="panel-heading" style={{backgroundColor: '#fff', borderColor: '#fff'}}>
+                <h3 className="panel-title" style={{fontSize: 30}}>Log In</h3>
               </div>
               <div className="panel-body">
                 <form>
@@ -40,10 +40,7 @@ export default class Login extends React.Component {
                     <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
                   </div>
 
-                  <button type="submit" className="btn btn-primary sign-up-btn" onClick={this.handleAccountClick.bind(this)}>Log In</button>
-
-                  <hr />
-                  <p>Need to <a hreft="#">Sign Up</a>?</p>
+                  <button type="submit" className="btn btn-primary sign-up-btn" style={{}} onClick={this.handleAccountClick.bind(this)}>Log In</button>
                 </form>
               </div>
             </div>
