@@ -31,12 +31,12 @@ export default class HomeHeader extends React.Component {
             <div className="header row">
 
                 <div className="col-md-4">
-                    <img src="../img/logo.png" height="50%" width="auto"/>
+                    <img src="../img/logo.png" height="100px" width="auto"/>
                 </div>
-                <div className="col-md-6 col-md-offset-2 buttons">
-                    <button className="btn btn-primary btn-lg" onClick={this.handleLoginClick.bind(this)}>Login</button>
-                    <button className="btn btn-primary btn-lg" onClick={this.handleTruckClick.bind(this)}>Search</button>
-                    <button className="btn btn-primary btn-lg" onClick={this.handleHomeClick.bind(this)}>Home</button>
+                <div className="col-md-4 col-md-offset-4 buttons">
+                    <button className="btn btn-primary btn-lg" onClick={this.handleLoginClick.bind(this)}>login</button>
+                    <button className="btn btn-primary btn-lg" onClick={this.handleTruckClick.bind(this)}>search</button>
+                    <button className="btn btn-primary btn-lg" onClick={this.handleHomeClick.bind(this)}>home</button>
                 </div>
             </div>
 

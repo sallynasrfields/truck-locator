@@ -1,47 +1,49 @@
-/* body{
-    font-family: 
-} */
-
+body{
+    font-family: 'Jura', sans-serif;
+    font-weight: 100;
+}
 
 /* Map */
 #mapid {
     height: 800px;
-  }
+}
   
-  /* Add your Truck Form */
-  .form-control {
-  width: 300px;
-  }
+/* Add your Truck Form */
+.form-control {
+    width: 300px;
+}
   
-  /* Food Trucks List */
-  #food-trucks-list {
-   width: 200px;
-  }
+/* Food Trucks List */
+#food-trucks-list {
+    width: 200px;
+}
   
-  /* Log In & Sign Up */
-  .vendor-log-in {
-      width: 40%;
-      margin: 0 auto;
-  }
+/* Log In & Sign Up */
+.vendor-log-in {
+    width: 40%;
+    margin: 0 auto;
+}
   
-  h3.panel-title {
-      font-size: 30px;
-  }
+h3.panel-title {
+    font-size: 30px;
+}
   
-  .panel-default>.panel-heading {
-      background-color: #fff;
-      border-color: #fff;
-  }
+.panel-default>.panel-heading {
+    background-color: #fff;
+    border-color: #fff;
+}
   
-  .header, .footer{
-      background-color: #011377;
-  }
+.header, .footer{
+    background-color: #011377;
+}
   
-  .buttons{
-      float:right;
-  }
-  
-  .btn{
-      background-color: transparent;
-      border: none;
-  }
+.buttons{
+    float:right;
+      
+}
+.btn{
+    background-color: transparent;
+    border: none;
+    line-height: 75px;
+    vertical-align: bottom;
+}
