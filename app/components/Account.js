@@ -1,6 +1,6 @@
 import React from 'react'
 import AccountHeader from './AccountHeader'
-export default class Landing extends React.Component {
+export default class Account extends React.Component {
 
       setChild(showAccount,showCalendar,showPreview){
        var showAccount = showAccount;
