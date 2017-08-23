@@ -1,6 +1,8 @@
-body{
+html, body{
+    height: 100%;
     font-family: 'Jura', sans-serif;
-    font-weight: 100;
+    background: #ffffff url("../img/bg.jpg") no-repeat fixed center; 
+    height: 400px;
 }
 
 /* Map */
@@ -36,6 +38,11 @@ h3.panel-title {
 .header, .footer{
     background-color: #011377;
 }
+
+.footer {
+    height: 50px;
+    margin-top: -50px;
+}
   
 .buttons{
     float:right;
@@ -46,4 +53,8 @@ h3.panel-title {
     border: none;
     line-height: 75px;
     vertical-align: bottom;
+}
+
+.content{
+    min-height: 100%;
 }
