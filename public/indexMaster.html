@@ -8,8 +8,13 @@
 	<meta name="google-signin-client_id" content="658962709945-4m82i2mu0o5ph79c4vigc7s8vh5hb2kh.apps.googleusercontent.com">
 	<meta name="google-signin-cookiepolicy" content="single_host_origin">
 	<meta name="google-signin-scope" content="profile email">
-	<!--Initialize Firebase-->
-	<!--<script>
+
+	<script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+	
+   	<!-- Here we include bootstrap. This will be made available to all of the generated HTML/JS that React generates-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script>
 	var config = {
 		apiKey: "AIzaSyCO8oh6N0P6pTjDoe1gt9Eq-xOjVJA1KSw",
 		authDomain: "food-truck-locator-31fa2.firebaseapp.com",
@@ -17,12 +22,9 @@
 		storageBucket: "food-truck-locator-31fa2.appspot.com",
 	};
 	firebase.initializeApp(config);
-	</script>-->
-
-
-	<script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
-    <!--<script type="text/javascript">
+	</script>
+	
+	<script type="text/javascript">
       // FirebaseUI config.
       var uiConfig = {
         signInSuccessUrl: '<url-to-redirect-to-on-success>',
@@ -38,25 +40,20 @@
 		  console.log(id_token);
 		}
 		
-    </script>-->
-
-	<!-- Here we include bootstrap. This will be made available to all of the generated HTML/JS that React generates-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </script
 </head>
 
-<body>
-
-	
-	<div id="app"></div>
-	
-	
-	<!-- All of our JS code will be transpiled into this bundle.js file -->
-	<script src="bundle.js"></script>
+<body>	
 	<!--Google Platform Library to integrate Google Sign-in-->
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+	<div id="app"></div>
+
+
+	<!-- All of our JS code will be transpiled into this bundle.js file -->
+	<script src="bundle.js"></script>
+
 	
-	<!--<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-	This is where React will deploy the contents it generates-->
 
 </body>
-</html>

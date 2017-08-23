@@ -9,6 +9,15 @@ export default class Login extends React.Component {
     var showLogin = showLogin;
     this.props.setParent(showLand, showSearch, showLogin);
   }
+
+  handleAccountClick(){
+        var showAccount = true;
+        var showCalendar = false;
+        var showPreview = false;  
+        var showLogin = false;       
+        this.props.setParentAccount(showAccount,showCalendar,showPreview, showLogin); 
+  }   
+
   render() {
     return (
       <div>
@@ -30,7 +39,9 @@ export default class Login extends React.Component {
                     <label htmlFor="inputPassword">Password</label>
                     <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
                   </div>
-                  <button type="submit" className="btn btn-primary sign-up-btn">Log In</button>
+
+                  <button type="submit" className="btn btn-primary sign-up-btn" onClick={this.handleAccountClick.bind(this)}>Log In</button>
+
                   <hr />
                   <p>Need to <a hreft="#">Sign Up</a>?</p>
                 </form>
@@ -42,11 +53,3 @@ export default class Login extends React.Component {
     );
   }
 }
-
-
-
-
-
-
-
-
