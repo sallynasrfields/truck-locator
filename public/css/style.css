@@ -56,8 +56,13 @@ h3.panel-title {
 
 .content{
     min-height: 100%;
+    padding-bottom: 50px;
 }
 
 #main-landing{
     background: #ffffff url("../img/bg.jpg") no-repeat fixed center; 
+}
+
+#search{
+    background-color: transparent;
 }
