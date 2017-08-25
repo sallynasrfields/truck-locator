@@ -48,6 +48,7 @@ html, body{
 
 #main-landing{
     background: #ffffff url("../img/bg.jpg") no-repeat fixed center; 
+    padding:20px;
     height:700px;
 }
 
