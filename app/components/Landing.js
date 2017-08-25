@@ -19,9 +19,11 @@ export default class Landing extends React.Component {
   render() {
     return (
       <div className="row content">
+        
         <HomeHeader setChild={this.setChild.bind(this)} />
 
         <div className="col-md-12" id="main-landing">
+
           <button className="btn btn-primary btn-lg" onClick={this.handleSearchClick.bind(this)}>Search for Trucks</button>
         </div>
       </div>

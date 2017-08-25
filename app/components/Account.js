@@ -12,7 +12,7 @@ render(){
     return(  
       <div>
         <AccountHeader setChild={this.setChild.bind(this)}/>
-<div className="row">
+<div className="header row">
         <div className="col-lg-12">
           <div className="panel panel-default vendor-log-in">
             <div className="panel-body">

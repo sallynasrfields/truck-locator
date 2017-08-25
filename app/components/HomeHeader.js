@@ -29,10 +29,10 @@ export default class HomeHeader extends React.Component {
     render() {
         return (
             <div className="header row">
-
                 <div className="col-md-4">
-                    <img src="../img/logo.png" height="100px" width="auto"/>
+                    <img src="../img/logo.png" height="100px" width="auto" />
                 </div>
+
                 <div className="col-md-4 col-md-offset-4 buttons">
                     <button className="btn btn-primary btn-lg" onClick={this.handleLoginClick.bind(this)}>login</button>
                     <button className="btn btn-primary btn-lg" onClick={this.handleTruckClick.bind(this)}>search</button>
