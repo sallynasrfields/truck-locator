@@ -14,8 +14,6 @@ export default class HomeHeader extends React.Component {
           <img src="../img/fb.png" alt="fb" height="50%" width="auto" />
         </div>
       </div>
-
-
     );
   }
 }

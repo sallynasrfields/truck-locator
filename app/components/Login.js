@@ -22,7 +22,7 @@ export default class Login extends React.Component {
     return (
       <div>
         <HomeHeader setChild={this.setChild.bind(this)} />
-
+<div className="container">
         <div className="row">
           <div className="col-lg-12" style={{backgroundColor: '#ccc'}}>
             <div className="panel panel-default vendor-log-in" style={{width: '40%', margin: '0 auto'}}>
@@ -45,6 +45,7 @@ export default class Login extends React.Component {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     );
