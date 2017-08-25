@@ -19,6 +19,7 @@ firebase.initializeApp({
     storageBucket: "food-truck-locator-31fa2.appspot.com",
 });
 
+
 // FirebaseUI config.
 var uiConfig = {
     signInSuccessUrl: '<url-to-redirect-to-on-success>',
