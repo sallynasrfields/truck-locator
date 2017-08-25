@@ -24,7 +24,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "babel": "^6.23.0",
+    "babel": "^6.23.0",   
+    "babel-loader": "^7.1.2",
     "babel-generator": "^6.26.0",
     "body-parser": "^1.15.0",
     "ejs": "^2.4.1",
