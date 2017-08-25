@@ -43,7 +43,7 @@ export default class Home extends React.Component {
     }
   render(){
     return(  
-      <div>  
+      <div id="home">  
          {this.state.LandingPage ? <Landing setParent={this.setParent.bind(this)}  /> : null}  
          {this.state.showSearchPage ? <TruckSearchMap setParent={this.setParent.bind(this)}/> : null}
          {this.state.showLogin ? <Login setParent={this.setParent.bind(this)} setParentAccount={this.setParentAccount.bind(this)}/>: null}

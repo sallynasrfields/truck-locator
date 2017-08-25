@@ -45,8 +45,10 @@ html, body{
     padding-bottom: 50px;
 }
 
+
 #main-landing{
     background: #ffffff url("../img/bg.jpg") no-repeat fixed center; 
+    height:700px;
 }
 
 #search{

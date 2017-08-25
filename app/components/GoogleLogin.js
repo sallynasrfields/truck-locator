@@ -1,30 +1,14 @@
-import React from 'react'
-import HomeHeader from './HomeHeader'
+import React, { Component } from 'react';
 
 //Assets
-import google from '../img/google.png'
+import google from './google.png'
 
-import config from '../config'
+import config from '../config';
 
-export default class Login extends React.Component{
+class GoogleLogin extends Component{
     constructor(props) {
         super(props)
     }
-
-    setChild(showLand, showSearch, showLogin) {
-        var showLand = showLand;
-        var showSearch = showSearch;
-        var showLogin = showLogin;
-        this.props.setParent(showLand, showSearch, showLogin);
-  }
-
-//     handleAccountClick(){
-//         var showAccount = true;
-//         var showCalendar = false;
-//         var showPreview = false;  
-//         var showLogin = false;       
-//         this.props.setParentAccount(showAccount,showCalendar,showPreview, showLogin); 
-//   } 
     
     componentDidMount(){
         (function() {
@@ -87,11 +71,9 @@ export default class Login extends React.Component{
     
     render(){
         return(
-            <div>
-                <HomeHeader setChild={this.setChild.bind(this)} />
-                <img src={google} title="google login" alt="google" onClick={ () => this.googleLogin() }/>
-            </div>
+            <img src={google} title="google login" alt="google" onClick={ () => this.googleLogin() }/>
         )
     }
 }
 
+export default GoogleLogin;
