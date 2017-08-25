@@ -4,6 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "prod": "NODE_ENV=production node server.js",
+    "postinstall": "webpack -p",
     "lint:js": "node_modules/eslint/bin/eslint.js ./ ./**/*.js --fix; exit 0",
     "lint:css": "node_modules/csslint/cli.js public/css/; exit 0",
     "build": "webpack"
