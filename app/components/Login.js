@@ -40,7 +40,7 @@ export default class Login extends React.Component {
                     <input type="password" className="form-control" id="inputPassword" placeholder="Password" />
                   </div>
 
-                  <button type="submit" className="btn btn-primary sign-up-btn" style={{}} onClick={this.handleAccountClick.bind(this)}>Log In</button>
+                  <button type="submit" className="btn btn-primary sign-up-btn"  onClick={this.handleAccountClick.bind(this)}>Log In</button>
                 </form>
               </div>
             </div>

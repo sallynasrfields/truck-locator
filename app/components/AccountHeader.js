@@ -28,7 +28,7 @@ export default class AccountHeader extends React.Component {
             <div>
                 <div className="header row" style={{paddingRight: "110px"}}>
                     <div className="col-md-4">
-                        <img src="../img/logo.png" height="100px" width="auto" />
+                        <img src="../img/logo.png" height="115px" width="auto" />
                     </div>
                     <div>
                         <button className="btn btn-primary btn-lg btn-account" style={{float: "right"}} onClick={this.handleAccountClick.bind(this)}>account profile</button>

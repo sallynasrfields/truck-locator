@@ -138,13 +138,13 @@ render(){
                       <input type="checkbox" className="form=check-input" />
                       Vegetarian
                     </label>
-                    <label className="form-check-label">
+                    <label className="form-check-label" style={{marginBottom: 30}}>
                       <input type="checkbox" className="form=check-input" />
                       Vegan
                     </label>
                   </div>
                 </section>
-                <button type="submit" className="btn btn-primary" style={{backgroundColor: "#011377", padding: 20, lineHeight: 0 }}>Submit</button>
+                <button type="submit" className="btn btn-primary account-submit" style={{padding: 20, lineHeight: 0 }}>Submit</button>
               </form>
             </div>
           </div>

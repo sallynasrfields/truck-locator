@@ -54,26 +54,76 @@ html, body{
     background-color: transparent;
 }
 
-input[type=checkbox] {
-    margin-right: 3px;
-}
-
 label {
     margin-right: 30px;
 }
 
-.btn-account:hover {
+/* Account Page */
+.btn-account:hover, .btn-account:active, .btn-account:focus {
     background-color: #fff;
     border-color: #011377;
     color: #011377;
     line-height: 20px;
-    margin-top: 30px;
+    margin-top: 45px;
 }
 
-.btn-header:hover {
+.btn-account:active:focus {
+    background-color: #0250C3;
+    color: #fff;
+    border: #fff;
+}
+
+input[type=checkbox] {
+    margin-right: 3px;
+}
+
+.account-submit {
+    background-color: #011377;
+    color: #fff;
+    border: #fff solid 1px;
+}
+
+.account-submit:hover {
     background-color: #fff;
-    border-color: #011377;
+    color: #011377;
+    border: #011377 solid 1px;
+}
+
+.account-submit:hover:focus {
+    background-color: #011377;
+    color: #fff;
+    border: #011377 solid 1px;
+}
+
+.btn-account {
+    margin-top: 15px;
+}
+
+/* Landing Page */
+.btn-header:hover, .btn-header:active, .btn-header:focus {
+    background-color: #fff;
+    border: #011377;
     color: #011377;
     line-height: 1;
     margin-bottom: 30px;
+}
+
+.btn-header:focus:active {
+    background-color: #0250C3;
+    color: #fff;
+    border: #fff;
+}
+
+/* Login Page */
+.sign-up-btn, .sign-up-btn:focus:active {
+    line-height: 20px;
+    background-color: #011377;
+    color: #fff;
+    border: #011377 1px solid;
+}
+
+.sign-up-btn:hover, .sign-up-btn:active, .sign-up-btn:focus {
+    background-color: #fff;
+    color: #011377;
+    border: #011377 1px solid;
 }
