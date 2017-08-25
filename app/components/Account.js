@@ -29,16 +29,7 @@ render(){
                   <label htmlFor="inputEmail">Email</label>
                   <input type="email" className="form-control" id="inputEmail" />
                 </div>
-                <p>Reset Password</p>
-                <div className="form-group">
-                  <label htmlFor="newPassword">New Password</label>
-                  <input type="password" className="form-control" />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="confirmPassword">Confirm Password</label>
-                  <input type="password" className="form-control" />
-                </div>
-                <div>
+                <div style={{marginBottom: 10}}>
                   <label className="control-label">Upload Photo</label>
                   <input id="input-1" type="file" className="file" />
                 </div>
@@ -50,7 +41,7 @@ render(){
                   <label htmlFor="comment">Describe Your Food Truck:</label>
                   <textarea className="form-control" rows={5} id="comment" defaultValue={""} />
                 </div>
-                <section className="container">
+                <section className="container" style={{margin: 0, padding: 0}}>
                   <div className="dropdown">
                     <select name="one" className="dropdown-select">
                       <option value>Display Yelp Ratings?</option>
@@ -61,7 +52,7 @@ render(){
                 </section>
                 <br />
                 <p>Type of Cuisine
-                </p><section className="container">
+                </p><section className="container" style={{margin: 0, padding: 0}}>
                   <div className="form-check-label">
                     <label className="form-check-label">
                       <input type="checkbox" className="form=check-input" />
@@ -153,7 +144,7 @@ render(){
                     </label>
                   </div>
                 </section>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary" style={{backgroundColor: "#011377", padding: 20, lineHeight: 0 }}>Submit</button>
               </form>
             </div>
           </div>

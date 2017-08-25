@@ -38,9 +38,9 @@ export default class HomeHeader extends React.Component {
                     </button>    
                 
                 <div className="col-md-4 col-md-offset-4 buttons">
-                    <button className="btn btn-primary btn-lg" onClick={this.handleLoginClick.bind(this)}>login</button>
-                    <button className="btn btn-primary btn-lg" onClick={this.handleTruckClick.bind(this)}>search</button>
-                    <button className="btn btn-primary btn-lg" onClick={this.handleHomeClick.bind(this)}>home</button>
+                    <button className="btn btn-primary btn-lg btn-header" onClick={this.handleLoginClick.bind(this)}>login</button>
+                    <button className="btn btn-primary btn-lg btn-header" onClick={this.handleTruckClick.bind(this)}>search</button>
+                    <button className="btn btn-primary btn-lg btn-header" onClick={this.handleHomeClick.bind(this)}>home</button>
                 </div>
             </div>
 

@@ -45,7 +45,6 @@ html, body{
     padding-bottom: 50px;
 }
 
-
 #main-landing{
     background: #ffffff url("../img/bg.jpg") no-repeat fixed center; 
     height:700px;
@@ -53,4 +52,28 @@ html, body{
 
 #search{
     background-color: transparent;
+}
+
+input[type=checkbox] {
+    margin-right: 3px;
+}
+
+label {
+    margin-right: 30px;
+}
+
+.btn-account:hover {
+    background-color: #fff;
+    border-color: #011377;
+    color: #011377;
+    line-height: 20px;
+    margin-top: 30px;
+}
+
+.btn-header:hover {
+    background-color: #fff;
+    border-color: #011377;
+    color: #011377;
+    line-height: 1;
+    margin-bottom: 30px;
 }
