@@ -1,115 +1,97 @@
 import React from 'react'
 import HomeHeader from './HomeHeader'
-import firebase from 'firebase';
 
-// Create the Search component
-export default class Login extends React.Component {
-  
-  // Initialize constructor of the class
-  constructor(){
-    super();
-    this.state = {
-      user: null
-    };
-        // Initialize the methods listener
-    this.socialLogin = this.socialLogin.bind(this);
-    this.handleLogOut = this.handleLogOut.bind(this);
-  }
+//Assets
+import google from '../img/google.png'
 
-  //
-  componentWillMount(){
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({user});
-    });
-  }
+import config from '../config'
 
-  socialLogin(loginProvider) {
-    var provider;
-    loginProvider = loginProvider.currentTarget.dataset.id;
-
-    switch(loginProvider){
-      case 'google':
-        provider = new firebase.auth.GoogleAuthProvider();
-      break;
-    // case 'facebook':
-    //     provider = new firebase.auth.FacebookAuthProvider();
-    //   break;
-    default:
-      console.log('Sorry, we are out of ' + loginProvider + '.');
+export default class Login extends React.Component{
+    constructor(props) {
+        super(props)
     }
 
-    firebase.auth().signInWithPopup(provider)
-      .then( (result) => {
-        console.log(`${result.user.email} ha iniciado session`);
-      }).catch( (error) => {
-        console.log(`Error ${error.code}: ${error.message}`);
-      });
+    setChild(showLand, showSearch, showLogin) {
+        var showLand = showLand;
+        var showSearch = showSearch;
+        var showLogin = showLogin;
+        this.props.setParent(showLand, showSearch, showLogin);
   }
 
-   handleLogOut(){
-    firebase.auth().signOut()
-      .then( result => console.log(`Ha cerrado sesión`))
-      .catch( error => console.log(`Error ${error.code}: ${error.message}`));
-  }
-
-    setChild(showLand,showSearch,showLogin){
-    var showLand = showLand;
-    var showSearch = showSearch; 
-    var showLogin = showLogin;
-    this.props.setParent(showLand,showSearch, showLogin);
+//     handleAccountClick(){
+//         var showAccount = true;
+//         var showCalendar = false;
+//         var showPreview = false;  
+//         var showLogin = false;       
+//         this.props.setParentAccount(showAccount,showCalendar,showPreview, showLogin); 
+//   } 
+    
+    componentDidMount(){
+        (function() {
+            var e = document.createElement("script");
+            e.type = "text/javascript";
+            e.async = true;
+            e.src = "https://apis.google.com/js/client:platform.js?onload=gPOnLoad";
+            var t = document.getElementsByTagName("script")[0];
+            t.parentNode.insertBefore(e, t)
+        })();    
+    }
+    
+    //Triggering login for google
+    googleLogin = () => {
+        let response = null;
+        window.gapi.auth.signIn({
+            callback: function(authResponse) {
+                this.googleSignInCallback( authResponse )
+            }.bind( this ),
+            clientid: config.google, //Google client Id
+            cookiepolicy: "single_host_origin",
+            requestvisibleactions: "http://schema.org/AddAction",
+            scope: "https://www.googleapis.com/auth/plus.login email"
+        });
+    }
+    
+    googleSignInCallback = (e) => {
+        console.log( e )
+        if (e["status"]["signed_in"]) {
+            window.gapi.client.load("plus", "v1", function() {
+                if (e["access_token"]) {
+                    this.getUserGoogleProfile( e["access_token"] )
+                } else if (e["error"]) {
+                    console.log('Import error', 'Error occured while importing data')
+                }
+            }.bind(this));
+        } else {
+            console.log('Oops... Error occured while importing data')
+        }
     }
 
-  renderUser () {
-         
-    if(this.state.user){
-      return (
-        <div className="card">
-            <img src={this.state.user.photoURL} alt="John" width='100%' /> 
-            <div className="card-container">
-              <h1>{this.state.user.displayName}</h1>
-              <p>
-                <button className='card-button' onClick={this.handleLogOut} >
-                  Logout
-                </button>
-              </p>
+    getUserGoogleProfile = accesstoken => {
+        var e = window.gapi.client.plus.people.get({
+            userId: "me"
+        });
+        e.execute(function(e) {
+            if (e.error) {
+                console.log(e.message);
+                console.log('Import error - Error occured while importing data')
+                return
+            
+            } else if (e.id) {
+                //Profile data
+                alert("Successfull login from google : "+ e.displayName )
+                console.log( e );
+                return;
+            }
+        }.bind(this));
+    }
+    
+    render(){
+        return(
+            <div>
+                <HomeHeader setChild={this.setChild.bind(this)} />
+                <img src={google} title="google login" alt="google" onClick={ () => this.googleLogin() }/>
             </div>
-        </div>
-      );
-    }else{
-      return (               
-        <div className="container">
-          Where is the button!
-            {/*<div className="fb-icon-bg"></div>
-            <div className="fb-bg" data-id='facebook' onClick={this.socialLogin}></div>*/}
-            	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" onClick={this.socialLogin}></div>
-{/*
-            <div className="g-icon-bg"></div>
-            <div className="g-signin2" data-id='google' onClick={this.socialLogin}></div>*/}
-        </div>
-      );
+        )
     }
-  }
-  render() {
-    return (
-  
-      <div className="app">
-        <HomeHeader setChild={this.setChild.bind(this)}/>
-        you are in Login
-
-        {this.renderUser()}
-      </div>
-    );
-  }
 }
-
-
-
-
-
-
-
-
-
-
-
 
