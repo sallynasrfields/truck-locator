@@ -30,10 +30,12 @@ export default class HomeHeader extends React.Component {
         return (
             <div className="header row">
                 <div className="col-md-4">
-                    <button className="btn btn-primary btn-lg" onClick={this.handleHomeClick.bind(this)}>
-                        <img src="../img/logo.png" height="100px" width="auto" />
-                    </button>    
+
+                    <img src="../img/logo.png" height="100px" width="auto" />
                 </div>
+
+                    <button className="btn btn-primary btn-lg" onClick={this.handleHomeClick.bind(this)}>
+                    </button>    
                 
                 <div className="col-md-4 col-md-offset-4 buttons">
                     <button className="btn btn-primary btn-lg" onClick={this.handleLoginClick.bind(this)}>login</button>
