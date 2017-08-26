@@ -22,7 +22,7 @@ export default class Landing extends React.Component {
         <HomeHeader setChild={this.setChild.bind(this)} />
 
         <div className="col-md-4 col-md-offset-4" >
-          <button className="btn btn-primary btn-lg" id="search" onClick={this.handleSearchClick.bind(this)}>Search for Trucks</button>
+          <button className="btn btn-primary btn-lg btn-search" onClick={this.handleSearchClick.bind(this)}>Search for Trucks</button>
 
         </div>
       </div>

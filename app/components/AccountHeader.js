@@ -31,6 +31,7 @@ export default class AccountHeader extends React.Component {
                         <img src="../img/logo.png" height="115px" width="auto" />
                     </div>
                     <div>
+                        <button className="btn btn-primary btn-lg btn-account" style={{float: "right"}}>logout</button>
                         <button className="btn btn-primary btn-lg btn-account" style={{float: "right"}} onClick={this.handleAccountClick.bind(this)}>account profile</button>
                         <button className="btn btn-primary btn-lg btn-account" style={{float: "right"}} onClick={this.handlePreviewClick.bind(this)}>display preview</button>
                         <button className="btn btn-primary btn-lg btn-account" style={{float: "right"}} onClick={this.handleCalendarClick.bind(this)}>calendar</button>

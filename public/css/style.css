@@ -53,13 +53,8 @@ html, body{
 }
 
 #main-landing{
-    background: #ffffff url("../img/bg.jpg") no-repeat center;
-    background-size: cover;
-}
-
-
-#search{
-    background-color: transparent;
+    background: #ccc url("../img/bg.jpg") no-repeat center;
+    height: 100vh;
 }
 
 label {
@@ -107,6 +102,13 @@ input[type=checkbox] {
     margin-top: 15px;
 }
 
+.account-form {
+    height: 80vh;
+}
+
+.account-table {
+    padding: 0;
+}
 /* Landing Page */
 .btn-header:hover, .btn-header:active, .btn-header:focus {
     background-color: #fff;
@@ -136,4 +138,27 @@ input[type=checkbox] {
     border: #011377 1px solid;
 }
 
+.login-column {
+    height: calc(100vh - 120px);
+    padding-top: 80px;
+}
 
+.btn-search {
+    background-color: #011377;
+    border: #fff solid 1px;
+    margin-top: 610px;
+    margin-left: 170px;
+    color: #fff;
+}
+
+.btn-search:hover, .btn-search:active, .btn-header:focus {
+    background-color: #fff;
+    border: #011377 solid 1px;
+    color: #011377;
+}
+
+.btn-search:focus:hover {
+    background-color: #011377;
+    border: #fff solid 1px;
+    color: #fff;
+}

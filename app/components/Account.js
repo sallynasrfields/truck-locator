@@ -13,10 +13,10 @@ render(){
       <div>
         <AccountHeader setChild={this.setChild.bind(this)}/>
 <div className="header row">
-        <div className="col-lg-12">
+        <div className="col-lg-12 account-table">
           <div className="panel panel-default vendor-log-in">
             <div className="panel-body">
-              <form>
+              <form className="account-form">
                 <div className="form-group">
                   <label htmlFor="inputName">Name</label>
                   <input type="text" className="form-control" id="inputName" />
