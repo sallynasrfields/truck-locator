@@ -1,7 +1,6 @@
 html, body{
     height: 100%;
     font-family: 'Jura', sans-serif;
-
 }
 
 /* Map */
@@ -43,17 +42,12 @@ html, body{
 .btn{
     background-color: transparent;
     border: none;
-    line-height: 55px;
+    line-height: 75px;
     vertical-align: bottom;
 }
 
-.content{
-    min-height: 100%;
-    padding-bottom: 50px;
-}
-
 #main-landing{
-    background: #ccc url("../img/bg.jpg") no-repeat center;
+    background: #cccccc url("../img/bg.jpg") no-repeat center;
     height: 100vh;
 }
 
@@ -144,11 +138,14 @@ input[type=checkbox] {
 }
 
 .btn-search {
-    background-color: #011377;
-    border: #fff solid 1px;
-    margin-top: 610px;
-    margin-left: 170px;
-    color: #fff;
+    background-color: #ffffff;
+    border: 1px solid #011377;
+    margin-top: 40%;
+    margin-left: -50%;
+    color: #011377;
+    font-size: 4em;
+    font-family: 'Lobster', cursive;
+    width: 55vw;
 }
 
 .btn-search:hover, .btn-search:active, .btn-header:focus {
